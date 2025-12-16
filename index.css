@@ -1,0 +1,107 @@
+/* ========================================
+   SIDEBAR STYLES - Simone Template Style
+   ======================================== */
+
+/* Sidebar Avatar - Single Clean Circle */
+.sidebar-avatar {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 1rem auto;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    background-image: url("/mukesh-avatar.png");
+    background-repeat: no-repeat;
+    /* Zoom in to hide the light grey outer ring from the image */
+    background-size: 180%;
+    background-position: 50% 32%;
+}
+
+/* Profile Name - Simone Style */
+.profile-name {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: #ffffff;
+    text-align: center;
+    line-height: 1.3;
+    margin-top: 0.6rem;
+    margin-bottom: 0.3rem;
+    letter-spacing: 0.02em;
+}
+
+/* Role/Title Text */
+.profile-role {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #20c997;
+    text-align: center;
+    line-height: 1.45;
+    margin-top: 0.25rem;
+}
+
+/* Navigation Links - Simone Style */
+.sidebar-nav-link {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.2s ease;
+    display: block;
+    padding: 0.75rem 2rem;
+    text-align: center;
+}
+
+.sidebar-nav-link:hover {
+    color: #ffffff;
+}
+
+.sidebar-nav-link.active {
+    color: #20c997;
+}
+
+/* ========================================
+   RESPONSIVE STYLES
+   ======================================== */
+
+/* Tablet (768px - 991px) */
+@media (max-width: 991px) {
+    .sidebar-avatar {
+        width: 110px;
+        height: 110px;
+    }
+
+    .profile-name {
+        font-size: 1.45rem;
+    }
+
+    .profile-role {
+        font-size: 0.95rem;
+    }
+
+    .sidebar-nav-link {
+        font-size: 0.92rem;
+    }
+}
+
+/* Mobile (< 768px) */
+@media (max-width: 767px) {
+    .sidebar-avatar {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-name {
+        font-size: 1.3rem;
+    }
+
+    .profile-role {
+        font-size: 0.9rem;
+    }
+
+    .sidebar-nav-link {
+        font-size: 0.9rem;
+    }
+}

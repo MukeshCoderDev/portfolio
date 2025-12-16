@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mukesh Shah - Full Stack Web Developer</title>
+    <meta name="description" content="Portfolio of Mukesh Shah, a Full Stack Web Developer specializing in React, Django, and REST APIs.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Open Sans"', 'sans-serif'],
+              poppins: ['"Poppins"', 'sans-serif'],
+            },
+            colors: {
+              dark: {
+                900: '#111418', // Main background
+                800: '#212529', // Sidebar/Cards
+                700: '#343a40', // Borders/Lines
+              },
+              accent: {
+                DEFAULT: '#20c997', // Teal/Green accent
+                hover: '#1baa80',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #111418;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #343a40;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #20c997;
+      }
+      /* Ensure all headings use Poppins */
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Poppins', sans-serif;
+      }
+      /* Typewriter Cursor */
+      .typewriter-cursor {
+        display: inline-block;
+        width: 2px;
+        background-color: #20c997;
+        animation: blink 1s step-end infinite;
+        margin-left: 4px;
+        height: 1.2em;
+        vertical-align: middle;
+      }
+      @keyframes blink {
+        from, to { opacity: 1; }
+        50% { opacity: 0; }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-dark-900 text-gray-300 antialiased font-sans">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

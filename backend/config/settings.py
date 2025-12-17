@@ -27,7 +27,12 @@ SECRET_KEY = os.environ.get(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DJANGO_DEBUG', 'True').lower() in ('true', '1', 'yes')
 
+ALLOWED_HOSTS = os.environ.get(
+    "DJANGO_ALLOWED_HOSTS", ""
+).split(",")
+
 ALLOWED_HOSTS = [host.strip() for host in ALLOWED_HOSTS if host.strip()]
+
 
 # =============================================================================
 # APPLICATION DEFINITION
@@ -96,8 +101,6 @@ DATABASES = {
         "PORT": os.environ.get("DB_PORT", "5432"),
     }
 }
-DEBUG = os.environ.get("DJANGO_DEBUG", "True") == "True"
-SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "unsafe-dev-key")
 
 
 
@@ -130,7 +133,7 @@ USE_TZ = True
 # STATIC FILES
 # =============================================================================
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # =============================================================================

@@ -84,16 +84,23 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # =============================================================================
 
 # PostgreSQL configuration using environment variables
+import os
+
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "portfolio",
-        "USER": "portfolio_user",
-        "PASSWORD": "123",
-        "HOST": "localhost",
-        "PORT": "5432",
+        "NAME": os.environ.get("DB_NAME", "portfolia"),
+        "USER": os.environ.get("DB_USER", "postgres"),
+        "PASSWORD": os.environ.get("DB_PASSWORD", ""),
+        "HOST": os.environ.get("DB_HOST", "localhost"),
+        "PORT": os.environ.get("DB_PORT", "5432"),
     }
 }
+DEBUG = os.environ.get("DJANGO_DEBUG", "True") == "True"
+SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "unsafe-dev-key")
+
+
+
 
 
 # =============================================================================

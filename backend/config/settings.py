@@ -234,8 +234,13 @@ ADMIN_CONTACT_EMAIL = os.environ.get('ADMIN_CONTACT_EMAIL', DEFAULT_FROM_EMAIL)
 # CELERY SETTINGS
 # =============================================================================
 
-CELERY_BROKER_URL = os.environ.get('REDIS_URL', 'redis://localhost:6379/0')
-CELERY_RESULT_BACKEND = os.environ.get('REDIS_URL', 'redis://localhost:6379/0')
+# CELERY_BROKER_URL = os.environ.get('REDIS_URL', 'redis://localhost:6379/0')
+# CELERY_RESULT_BACKEND = os.environ.get('REDIS_URL', 'redis://localhost:6379/0')
+
+
+CELERY_BROKER_URL = None
+CELERY_RESULT_BACKEND = None
+
 
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
@@ -282,3 +287,10 @@ LOGGING = {
         },
     },
 }
+
+# =============================================================================
+# CELERY SAFE MODE (NO REDIS - FREE DEPLOYMENT)
+# =============================================================================
+
+CELERY_TASK_ALWAYS_EAGER = True
+CELERY_TASK_EAGER_PROPAGATES = True

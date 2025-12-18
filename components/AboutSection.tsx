@@ -51,7 +51,7 @@ const AboutSection: React.FC = () => {
               
               <div className="border-b border-dark-700 py-4">
                 <span className="block text-sm text-gray-500 font-semibold uppercase mb-1 font-poppins tracking-wide">Email:</span>
-                <a href="mailto:mukeshshah.dev@gmail.com" className="text-accent hover:underline font-medium font-sans">mukeshshah.dev@gmail.com</a>
+                <a href="mailto:mukeshshah.dev@gmail.com" className="text-accent hover:underline font-medium font-sans">mukeshcoder1984@gmail.com</a>
               </div>
               
               <div className="border-b border-dark-700 py-4">

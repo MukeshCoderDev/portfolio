@@ -1,4 +1,4 @@
-name: Deploy static content to Pages
+name: Deploy static content to GitHub Pages
 
 on:
 push:
@@ -17,14 +17,11 @@ cancel-in-progress: false
 
 jobs:
 deploy:
-environment:
-name: github-pages
-url: ${{ steps.deployment.outputs.page_url }}
 runs-on: ubuntu-latest
 
 ```
 steps:
-  - name: Checkout
+  - name: Checkout repository
     uses: actions/checkout@v4
 
   - name: Setup Pages
